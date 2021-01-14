@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION['loggedin'])) {
+if (!isset($_SESSION['username'])) {
 	header('Location: index.php');
 	exit;
 }
@@ -47,7 +47,7 @@ $stmt->close();
 				<table>
 					<tr>
 						<td>Username:</td>
-						<td><?=$_SESSION['name']?></td>
+						<td><?=$_SESSION['username']?></td>
 					</tr>
 					<tr>
 						<td>Password:</td>
